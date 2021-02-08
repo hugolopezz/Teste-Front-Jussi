@@ -1,0 +1,92 @@
+.footer{
+    background-color: #000;
+    padding-top: 136px;
+    width: 100%;
+    .container{
+        padding-bottom: 136px;
+        .titulo{
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 40px;
+            letter-spacing: 0em;
+            text-align: center;
+            color: white;
+            padding-bottom: 24px;
+            .detalhe{
+                color: #03FFA5;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0em;
+                margin-right: 50px;
+            }
+        }
+        form{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            .email-newsletter{
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid #03FFA5;
+                padding-bottom: 11px;
+                color: white;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 24px;
+                letter-spacing: 0em;
+                
+                &::placeholder {
+                    color: white;
+                }
+            }
+            .submit-newsletter{
+                background-color: transparent;
+                border: none;
+                color: #03FFA5;
+                border-bottom: 1px solid #03FFA5;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 40px;
+                letter-spacing: 0em;
+                padding-bottom: 8px;
+            }
+        }
+    }
+    
+    .footer__bottom{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        .wppCompany{
+            background: url('../../images/svg/wppCompany.svg') no-repeat;
+            padding: 14px 75px;
+            margin-right: 150px;
+        }
+        .social{
+            margin-left: 150px;
+            i{
+                margin-right: 10px;
+            }
+            .facebook{
+                background: url('../../images/svg/facebook.svg') no-repeat;
+                padding: 5px 16px;
+            }
+            .instagram{
+                background: url('../../images/svg/instagram.svg') no-repeat;
+                padding: 5px 16px;
+            }
+            .linkedin{
+                background: url('../../images/svg/linkedin.svg') no-repeat;
+                padding: 5px 16px;
+            }
+        }
+        
+    }
+    
+}
