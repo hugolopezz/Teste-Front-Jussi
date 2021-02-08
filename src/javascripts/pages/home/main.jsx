@@ -14,7 +14,6 @@ import imagemJussi from '../../../images/image-jussi.png';
 
 function Main() {
   return (
-    <BrowserRouter>
       <>
         <Header />
         <div className="content">
@@ -172,7 +171,6 @@ function Main() {
         </div>
         <Footer />
       </>
-    </BrowserRouter>
   );
 }
 

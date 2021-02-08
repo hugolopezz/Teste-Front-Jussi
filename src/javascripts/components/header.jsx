@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CharactersItems from './characterItems';
+import Loading from './loading';
 
 class Header extends Component {
   constructor(props) {
@@ -8,6 +9,7 @@ class Header extends Component {
     this.ref = React.createRef();
     this.state = {
       characters: [],
+      loading: true,
       setSearchTerm: ''
     };
 
@@ -17,6 +19,11 @@ class Header extends Component {
   }
   componentDidMount() {
     this.charactersApi();
+
+    setTimeout(() => {
+      this.setState({ loading: false })
+
+    }, 2000);
   }
 
   charactersApi = () => {
@@ -30,7 +37,7 @@ class Header extends Component {
   };
 
   render() {
-    const { characters } = this.state;
+    const { characters, loading } = this.state;
     const filterCharacters = characters.filter((val) => {
       if (this.state.setSearchTerm === "") {
         return null
@@ -74,6 +81,7 @@ class Header extends Component {
           </a>
           <i className="cart"></i>
         </div>
+        <Loading result={require('../lottie/loading.json')} activeStart={loading} />
       </header>
     );
   }
